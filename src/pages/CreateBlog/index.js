@@ -1,0 +1,26 @@
+import React from 'react'
+import {Button, Gap, Input, Link, TextArea, Upload} from "../../components";
+import './createblog.scss';
+import {useHistory} from "react-router-dom";
+
+
+
+const CreateBlog = () => {
+    const history = useHistory();
+    return (
+        <div className='blog-spot'>
+            <Link title='kembali' onClik={() => history.push('/')} />
+            <p className='title'>Create New Blog Post</p>
+            <Input label='Post Title'/>
+            <Upload/>
+            <TextArea />
+            <Gap height={20}/>
+            <div className='button-action'>
+            <Button title='Save'/>
+            </div>
+        </div>
+           
+    )
+}
+
+export default CreateBlog
